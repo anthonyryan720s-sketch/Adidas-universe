@@ -5,7 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        height: 100dvh;
+        width: 100dvw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header{
+        flex: 1;
+        background-color: white;
+        gap: 20px;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    main{
+        flex: 5;
+        background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+        
+    
+    footer{
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
 <body>
-    <h1>aaaaaaaaaaaaaaaaaaaaaa</h1>
+    <header>
+        <nav>
+            <img src="Logo.jpg" alt="" width="100px">
+            <a href="">Men</a>
+            <a href="">women</a>
+            <a href="">Kids</a>
+            <input type="text" placeholder="Search..">
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="Messi.avif" alt="" width="450 px">
+            <p>Baju Messi</p>
+        </section>
+        <section>
+            <img src="Messi 2.avif" alt="" width="450 px">
+            <p>Baju Messi 2.0</p>
+        </section>
+        <section>
+        <img src="Pembalap.avif" alt="" width="450px">
+            <p>Mercedes F1</p>
+        </section>
+        <section>
+            <img src="Pembalap2.avif" alt="" width="450px">
+            <p>Mercedes F1 2.0</p>
+        </section>
+    </main>
+    <footer>
+        <img src="Logo.jpg" alt="" width="100px">
+    </footer>
 </body>
 </html>
