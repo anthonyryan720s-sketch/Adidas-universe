@@ -4,116 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adidas Universe</title>
+    <style>
+        
+        #modalpromo {
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 9999; 
+            left: 0;
+            top: 0;
+            width: 100vw;  
+            height: 100vh; 
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            margin: 0; 
+        }
+
+        header {
+            padding: 1rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        input[type="text"] {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        main {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 40px 5%;
+            background-color: #ffffff;
+        }
+
+        section {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        section img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        section p {
+            padding: 15px;
+            font-weight: bold;
+            color: #222;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            padding: 30px;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        footer img {
+            filter: invert(1);
+        }
+
+        footer > p {
+            color: white;
+            margin: 0;
+        }
+    </style>
 </head>
-<style>
-
-    body {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background-color: #f5f5f5;
-    }
-
-    
-    header {
-        padding: 1rem 5%;
-        background-color: white;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 30px;
-    }
-
-    nav a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 14px;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: #007bff; /* Warna aksen biru */
-    }
-
-    input[type="text"] {
-        padding: 8px 15px;
-        border: 1px solid #ddd;
-        border-radius: 20px;
-        outline: none;
-    }
-
-    
-    main {
-        flex: 1;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 25px;
-        padding: 40px 5%;
-        background-color: #ffffff;
-    }
-
-    section {
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-        border: 1px solid #eee;
-    }
-
-    section:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    section img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-    }
-
-    section p {
-        padding: 15px;
-        font-weight: bold;
-        color: #222;
-        font-size: 1.1rem;
-    }
-
-    footer {
-        padding: 30px;
-        background-color: #111;
-        display: flex;
-        justify-content: center;
-    }
-
-    footer img {
-        filter: invert(1);
-    }
-
-    footer > p{
-        color: white;
-    }
-
-
-</style>
 <body>
+
+    <div id="modalpromo">
+        <div style="
+            background-color: white;
+            padding: 30px;
+            width: 350px; /* Menggunakan ukuran tetap (px) agar lebih responsif di PC & Mobile */
+            max-width: 85%;
+            text-align: center;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            ">
+            
+            <span onclick="closePromo()"
+                  style="
+                  position: absolute;
+                  right: 15px;
+                  top: 10px;
+                  cursor: pointer;
+                  font-size: 24px;
+                  color: #aaa;
+                  "
+            >&times;</span>
+            
+            <h2 style="color: orange; margin-top: 10px;">KHUSUS HARI INI!</h2>
+            <p style="color: #444; line-height: 1.5;">
+                Gunakan kode <b>BARU20</b> untuk diskon 20% pada pembelian pertama Anda
+            </p>
+            <button
+                onclick="closePromo()"
+                style="
+                    background: orange;
+                    color: white;
+                    border: none;
+                    padding: 12px 25px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    margin-top: 10px;
+                "
+            >
+                Ambil Diskon
+            </button>
+        </div>
+    </div>
+
     <header>
         <nav>
-            <img src="Logo.jpg" alt="" width="100px">
+            <img src="Logo.jpg" alt="Adidas Logo" width="100px">
             <a href="Men.html">Men</a>
             <a href="woman.html">women</a>
             <a href="Kids.html">Kids</a>
@@ -121,27 +180,39 @@
             <input type="text" placeholder="Search..">
         </nav>
     </header>
+
     <main>
         <section>
-            <img src="Tenis.jpeg" alt="" width="450 px">
+            <img src="Tenis.jpeg" alt="Tennis">
             <p>Tennis</p>
         </section>
         <section>
-            <img src="Messi 2.avif" alt="" width="450 px">
+            <img src="Messi 2.avif" alt="Football">
             <p>Football</p>
         </section>
         <section>
-        <img src="Pembalap.avif" alt="" width="450px">
+            <img src="Pembalap.avif" alt="Mercedes F1">
             <p>Mercedes F1</p>
         </section>
         <section>
-            <img src="Sepatu.avif" alt="" width="450px">
+            <img src="Sepatu.avif" alt="Shoes">
             <p>Shoes</p>
         </section>
     </main>
+
     <footer>
-        <img src="Logo.jpg" alt="" width="100px">
-        <p>2026 Adidas Universe Indonesia</p>
+        <img src="Logo.jpg" alt="Adidas Logo" width="100px">
+        <p>© 2026 Adidas Universe Indonesia</p>
     </footer>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("modalpromo").style.display = "flex";
+        });
+
+        function closePromo() {
+            document.getElementById("modalpromo").style.display = "none";
+        }
+    </script>
 </body>
 </html>
