@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #f5f5f5;
+    }
+
+    
+    header {
+        padding: 1rem 5%;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #007bff; /* Warna aksen biru */
+    }
+
+    input[type="text"] {
+        padding: 8px 15px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+    }
+
+    
+    main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 40px 5%;
+        background-color: #ffffff;
+    }
+
+    section {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        border: 1px solid #eee;
+    }
+
+    section:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    section p {
+        padding: 15px;
+        font-weight: bold;
+        color: #222;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 30px;
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer img {
+        filter: invert(1);
+    }
+
+    footer > p{
+        color: white;
+    }
+
+
+</style>
+<body>
+    <header>
+        <nav>
+            <img src="Logo.jpg" alt="" width="100px">
+            <p>Shoes</p>
+            <input type="text" placeholder="Search..">
+        </nav>
+    </header>
+    <main>
+  
+    </main>
+    <footer>
+        <img src="Logo.jpg" alt="" width="100px">
+        <p>2026 Adidas Universe Indonesia</p>
+    </footer>
+</body>
+</html>
