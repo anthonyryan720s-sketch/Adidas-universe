@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #f5f5f5;
+    }
+
+    
+    header {
+        padding: 1rem 5%;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #007bff; /* Warna aksen biru */
+    }
+
+    input[type="text"] {
+        padding: 8px 15px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        outline: none;
+    }
+
+    
+    main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        padding: 40px 5%;
+        background-color: #ffffff;
+    }
+
+    section {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        border: 1px solid #eee;
+        display: grid;
+        flex-direction: column;
+        justify-content:baseline;
+        align-items: baseline;
+    }
+
+    section:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+
+    section p {
+        padding: 15px;
+        font-weight: bold;
+        color: #222;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 30px;
+        background-color: #111;
+        display: flex;
+        justify-content: center;
+    }
+
+    footer img {
+        filter: invert(1);
+    }
+
+    footer > p{
+        color: white;
+    }
+
+
+</style>
+<body>
+    <header>
+        <nav>
+            <img src="Logo.jpg" alt="" width="100px">
+            <p>Woman</p>
+            <input type="text" placeholder="Search..">
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="Baju1.avif" alt="" width="400px">
+            <h4>Arsenal FC 26/27 Home Jersey</h4>
+            <h6>IDR 1.200.000</h6>
+        </section>
+        <section>
+            <img src="Baju2.avif" alt="" width="400px">
+            <h4>CLIMACOOL POWER TRAINING GRAPHIC T-SHIRT</h4>
+            <h6>IDR 550.000</h6>
+        </section>
+        <section>
+            <img src="Baju3.avif" alt="" width="400px">
+            <h4>Jersey Liverpool</h4>
+            <h6>IDR 1.100.000</h6>
+        </section>
+        <section>
+            <img src="Baju4.avif" alt="" width="400px">
+            <h4>Jersey Juventus</h4>
+            <h6>IDR 1.150.000</h6>
+        </section>
+        <section>
+            <img src="Baju5.avif" alt="" width="400px">
+            <h4>T-shirt Piala Dunia</h4>
+            <h6>IDR 600.000</h6>
+        </section>
+        <section>
+            <img src="Sepatu1.avif" alt="" width="400px">
+            <h4>Sepatu Running Galaxy 7</h4>
+            <h6>IDR 850.000</h6>
+        </section>
+        <section>
+            <img src="Sepatu2.avif" alt="" width="400px">
+            <h4>Sepatu Samba OG</h4>
+            <h6>IDR 2.250.000</h6>
+        </section>
+        <section>
+            <img src="Sepatu3.avif" alt="" width="400px">
+            <h4>Sepat Duramo SL</h4>
+            <h6>IDR 800.000</h6>
+        </section>
+        <section>
+            <img src="Sepatu4.avif" alt="" width="400px">
+            <h4>Sepatu AdiZero Adios pro 4</h4>
+            <h6>IDR 4.000.000</h6>
+        </section>
+        <section>
+            <img src="Sepatu5.avif" alt="" width="400px">
+            <h4>Sepatu Gazelle</h4>
+            <h6>IDR 1.900.000</h6>
+        </section>
+         <section>
+            <img src="Celana1.avif" alt="" width="400px">
+            <h4>Celana House of Tiro Nations Pack</h4>
+            <h6>IDR 1.000.000</h6>
+        </section>
+         <section>
+            <img src="Celana2.avif" alt="" width="400px">
+            <h4>CELANA OLAHRAGA BAGGY</h4>
+            <h6>IDR 1.500.000</h6>
+        </section>
+         <section>
+            <img src="Celana3.avif" alt="" width="400px">
+            <h4>Celana Track Pants Firebird</h4>
+            <h6>IDR 1.400.000</h6>
+        </section>
+         <section>
+            <img src="Celana4.avif" alt="" width="400px">
+            <h4>Celana Panjang Training Tiro 24</h4>
+            <h6>IDR 800.000</h6>
+        </section>
+        <section>
+            <img src="Celana5.avif" alt="" width="400px">
+            <h4>Celana Panjang Golf Ultimate365</h4>
+            <h6>IDR 1.300.000</h6>
+        </section>
+        
+    </main>
+    <footer>
+        <img src="Logo.jpg" alt="" width="100px">
+        <p>2026 Adidas Universe Indonesia</p>
+    </footer>
+</body>
+</html>
