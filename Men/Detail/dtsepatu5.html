@@ -3,9 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Detail Produk - Adidas Universe</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            padding: 1rem 5%;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        input[type="text"] {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+
+        /* CONTAINER UTAMA DETAIL PRODUK */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 90%;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Membagi 2 kolom sama besar */
+            gap: 50px;
+            padding: 40px;
+        }
+
+        /* SISI KIRI: AREA GAMBAR */
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* SISI KANAN: AREA INFORMASI & PEMBELIAN */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-category {
+            font-size: 14px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #111;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* PILIHAN UKURAN (SIZE) */
+        .size-section {
+            margin-bottom: 30px;
+        }
+
+        .size-title {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .size-btn {
+            border: 1px solid #ddd;
+            background-color: white;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: 0.2s;
+        }
+
+        .size-btn:hover {
+            border-color: #111;
+        }
+
+        .size-btn.active {
+            background-color: #111;
+            color: white;
+            border-color: #111;
+        }
+
+        /* TOMBOL AKSI */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .btn-primary {
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #333;
+        }
+
+        /* DESKRIPSI PRODUK */
+        .product-description {
+            border-top: 1px solid #eee;
+            padding-top: 25px;
+        }
+
+        .description-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #111;
+        }
+
+        .product-description p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 30px;
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        footer img {
+            filter: invert(1);
+        }
+
+        footer > p {
+            color: white;
+        }
+
+
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <nav>
+            <img src="../Logo.jpg" alt="Adidas Logo" width="100px">
+            <div class="nav-links">
+                <a href="Men.html">Men</a>
+            </div>
+            <input type="text" placeholder="Search..">
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="../Sepatu5.avif" alt="Detail Produk Adidas">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <p class="product-category">Men • Football</p>
+            <h1 class="product-title">Jersey Manchester United</h1>
+            <p class="product-price">IDR 1.250.000</p>
+
+            <div class="size-section">
+                <p class="size-title">Pilih Ukuran</p>
+                <div class="size-options">
+                    <button class="size-btn" onclick="selectSize(this)">S</button>
+                    <button class="size-btn" onclick="selectSize(this)">M</button>
+                    <button class="size-btn" onclick="selectSize(this)">L</button>
+                    <button class="size-btn" onclick="selectSize(this)">XL</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-primary">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="product-description">
+                <p class="description-title">Deskripsi Produk</p>
+                <p>
+                    Jersey sepak bola Adidas resmi yang memadukan warisan klub legendaris dengan teknologi performa modern. Dibuat menggunakan material AEROREADY yang menyerap keringat guna memastikan Anda tetap sejuk dan kering, baik saat berada di atas lapangan maupun ketika memberikan dukungan dari tribun.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <img src="../Logo.jpg" alt="Adidas Logo" width="100px">
+        <p>© 2026 Adidas Universe Indonesia</p>
+    </footer>
 </body>
 </html>
