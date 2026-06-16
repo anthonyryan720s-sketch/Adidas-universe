@@ -66,6 +66,20 @@
             border-radius: 20px;
             outline: none;
         }
+
+        .banner-video {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000; 
+        }
+
+        .banner-video video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
         
         main {
             flex: 1;
@@ -125,6 +139,8 @@
             color: white;
             margin: 0;
         }
+
+
     </style>
 </head>
 <body>
@@ -185,6 +201,12 @@
             <input type="text" placeholder="Search..">
         </nav>
     </header>
+
+    <div class="banner-video">
+        <video autoplay loop muted playsinline>
+            <source src="Adidas 2026 World Cup Commercial.mp4" type="video/mp4">
+        </video>
+    </div>
 
     <main>
         <section>
